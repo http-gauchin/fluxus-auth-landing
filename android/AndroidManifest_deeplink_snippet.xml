@@ -1,4 +1,6 @@
-<!-- Coloque dentro da sua MainActivity no AndroidManifest.xml -->
+<!-- Coloque este intent-filter dentro da MainActivity no AndroidManifest.xml.
+     Ele é obrigatório para o botão "Voltar para o app" abrir o APK instalado. -->
+
 <intent-filter>
     <action android:name="android.intent.action.VIEW" />
 
