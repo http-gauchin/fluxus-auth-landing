@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fluxus PDV — Autenticação</title>
+  <meta name="theme-color" content="#0f172a">
+  <style>
+    :root { color-scheme: dark; --bg:#0f172a; --card:#111827; --txt:#f8fafc; --muted:#94a3b8; --a:#22d3ee; --b:#6366f1; --c:#14b8a6; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; display:grid; place-items:center; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background: radial-gradient(circle at top left, rgba(34,211,238,.25), transparent 30%), radial-gradient(circle at bottom right, rgba(99,102,241,.30), transparent 28%), var(--bg); color:var(--txt); padding:24px; }
+    main { width:min(680px,100%); background:rgba(17,24,39,.86); border:1px solid rgba(255,255,255,.10); border-radius:28px; padding:32px; box-shadow:0 24px 80px rgba(0,0,0,.35); backdrop-filter:blur(18px); }
+    .logo { width:82px; height:82px; border-radius:24px; display:grid; place-items:center; background:linear-gradient(135deg,var(--a),var(--b)); margin-bottom:20px; font-weight:900; font-size:30px; }
+    img.logo-img { width:82px; height:82px; border-radius:24px; object-fit:cover; margin-bottom:20px; display:none; }
+    h1 { margin:0 0 10px; font-size:clamp(28px,6vw,46px); line-height:1.04; }
+    p { color:var(--muted); font-size:18px; line-height:1.55; margin:0 0 22px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; }
+    a.button { display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 20px; border-radius:16px; color:white; text-decoration:none; font-weight:800; background:linear-gradient(135deg,var(--c),var(--b)); box-shadow:0 12px 30px rgba(20,184,166,.20); }
+    .hint { margin-top:22px; font-size:14px; color:#cbd5e1; }
+    code { background:rgba(255,255,255,.08); padding:3px 6px; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="assets/fluxus-logo.png" class="logo-img" onload="this.style.display='block';this.nextElementSibling.style.display='none'" alt="Fluxus PDV">
+    <div class="logo">F</div>
+    <h1>Fluxus PDV</h1>
+    <p>Esta página conecta a autenticação do Supabase ao aplicativo Android. Depois de confirmar o e-mail, use o botão de retorno para abrir o app automaticamente.</p>
+    <div class="actions">
+      <a class="button" href="auth/callback/">Ir para retorno do app</a>
+      <a class="button" href="fluxuspdv://auth/callback?status=manual">Abrir app</a>
+    </div>
+    <div class="hint">Deep link configurado: <code>fluxuspdv://auth/callback</code></div>
+  </main>
+</body>
+</html>
